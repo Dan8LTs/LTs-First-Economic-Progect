@@ -7,12 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTSefpBL", "LTSefpBL\LTSefp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTSefp.CMD", "LTSefp.CMD\LTSefp.CMD.csproj", "{824C8607-BA25-406B-8BEB-0F7030B12631}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTSefpBLTests1", "LTSefpBLTests1\LTSefpBLTests1.csproj", "{EE8D557F-1FDC-4D12-96B9-A25B26804FA9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTSefpBLTests", "LTSefpBLTests1\LTSefpBLTests.csproj", "{EE8D557F-1FDC-4D12-96B9-A25B26804FA9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Information", "Information", "{962BCA33-DBEF-4EBD-95B4-510B800D6016}"
 	ProjectSection(SolutionItems) = preProject
 		TextFile1.txt = TextFile1.txt
 	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Loader", "Loader\Loader.vdproj", "{45302C79-CD1B-41E2-B23F-9BEE9FCED430}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,8 @@ Global
 		{EE8D557F-1FDC-4D12-96B9-A25B26804FA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE8D557F-1FDC-4D12-96B9-A25B26804FA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE8D557F-1FDC-4D12-96B9-A25B26804FA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45302C79-CD1B-41E2-B23F-9BEE9FCED430}.Debug|Any CPU.ActiveCfg = Debug
+		{45302C79-CD1B-41E2-B23F-9BEE9FCED430}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

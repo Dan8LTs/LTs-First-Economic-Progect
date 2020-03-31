@@ -15,6 +15,7 @@ namespace LTSefpBL.Model
 
         public virtual User User { get; }
 
+        public CostsA() { }
         public CostsA(User user)
         {
             User = user ?? throw new ArgumentNullException("User can't be empty", nameof(user));

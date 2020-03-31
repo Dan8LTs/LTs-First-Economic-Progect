@@ -4,14 +4,13 @@ using System.Linq;
 
 namespace LTSefpBL.Model
 {
-    [Serializable] 
+    [Serializable]
     public class ContributionA
     {
         public int Id { get; set; }
         public Dictionary<Contribution, double> Contributions { get; }
-
         public virtual User User { get; }
-
+        public ContributionA() { }
         public ContributionA(User user)
         {
             User = user ?? throw new ArgumentNullException("User can't be empty", nameof(user));

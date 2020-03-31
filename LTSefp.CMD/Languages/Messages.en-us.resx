@@ -120,6 +120,9 @@
   <data name=":" xml:space="preserve">
     <value>:</value>
   </data>
+  <data name="Age" xml:space="preserve">
+    <value>You are: </value>
+  </data>
   <data name="BeforeCosts" xml:space="preserve">
     <value>Before input new cost press enter</value>
   </data>
@@ -162,6 +165,9 @@
   <data name="Hello" xml:space="preserve">
     <value>Hello! This is app LTSeconomics!</value>
   </data>
+  <data name="HelloName" xml:space="preserve">
+    <value>Hello</value>
+  </data>
   <data name="If you want" xml:space="preserve">
     <value>Enter cont, if you want to exit:</value>
   </data>
@@ -185,6 +191,9 @@
   </data>
   <data name="NotName" xml:space="preserve">
     <value>This is not your name*_*</value>
+  </data>
+  <data name="Quit" xml:space="preserve">
+    <value>Quit - Q</value>
   </data>
   <data name="Rate" xml:space="preserve">
     <value>Enter the annual interest rate:</value>

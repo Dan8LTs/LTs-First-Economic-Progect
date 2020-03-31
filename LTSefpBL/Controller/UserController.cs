@@ -9,46 +9,46 @@ using System.Linq;
 
 namespace LTSefpBL.Controller
 {/// <summary>
-/// Контроллер пользователя.
-/// </summary>
-    
+ /// Контроллер пользователя.
+ /// </summary>
+
     public class UserController : ControllerBase
     {
         /// <summary>
         /// Пользователь приложения.
         /// </summary>
-        
+
         public List<User> Users { get; }
 
         public User CurrentUser { get; }
 
         public bool IsNewUser { get; } = false;
-        
+
         /// <summary>
         /// Создание контроллера.
         /// </summary>
         /// <param name="user"></param>
-        
+
         public UserController(string userName)
         {
             if (string.IsNullOrWhiteSpace(userName))
             {
                 throw new ArgumentNullException("UserName can't be empty", nameof(userName));
             }
-            
-                Users = GetUsersData();
-             
-                CurrentUser = Users.SingleOrDefault(u => u.Name == userName);
-             
-            if(CurrentUser == null)
+
+            Users = GetUsersData();
+
+            CurrentUser = Users.SingleOrDefault(u => u.Name == userName);
+
+            if (CurrentUser == null)
             {
                 CurrentUser = new User(userName);
                 Users.Add(CurrentUser);
                 IsNewUser = true;
             }
         }
-       
-        
+
+
         /// <summary>
         /// Получить данные.
         /// </summary>
@@ -75,9 +75,5 @@ namespace LTSefpBL.Controller
         {
             Save(Users);
         }
-        
-
-
-
     }
 }

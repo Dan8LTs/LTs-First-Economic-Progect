@@ -1,5 +1,6 @@
 ﻿#region Libraries
 using System;
+using System.Resources;
 #endregion
 
 namespace LTSefpBL.Model
@@ -33,7 +34,17 @@ namespace LTSefpBL.Model
         /// <param name="earning">Заработок.</param>
         /// 
 
-        public int Age { get { return DateTime.Now.Year - BirthDate.Year; } }
+        public int Age() 
+        {   
+            if(BirthDate < DateTime.Parse("01.01.1950") || BirthDate >= DateTime.Now)
+            {
+                return DateTime.Now.Year - BirthDate.Year; 
+            }
+            else
+            {
+                return 0;
+            }
+        }
         /// <summary>
         /// Поздравление с днём рождения
         /// </summary>
@@ -50,8 +61,9 @@ namespace LTSefpBL.Model
                     return "";
                 }
             }
-
         }
+
+        public User() { }
 
         public User(string name,
                     DateTime birthDate,
@@ -66,11 +78,11 @@ namespace LTSefpBL.Model
 
             if (birthDate < DateTime.Parse("01.01.1950") || birthDate >= DateTime.Now)
             {
-                throw new ArgumentException("Невозможная дата рождения.", nameof(birthDate));
+                throw new ArgumentNullException("Невозможная дата рождения.", nameof(birthDate));
             }
             if (earning <= 0)
             {
-                throw new ArgumentException("Для пользования приложением заработок должен быть больше 0.", nameof(earning));
+                throw new ArgumentNullException("Для пользования приложением заработок должен быть больше 0.", nameof(earning));
             }
             #endregion
             Name = name;
@@ -89,10 +101,9 @@ namespace LTSefpBL.Model
         }
 
 
-        public override string ToString()
+        public string Hello(ResourceManager resMan, System.Globalization.CultureInfo culture)
         {
-            return $"Привет {Name}! Тебе:  {Age} {Birth}";
-
+            return $"{resMan.GetString("HelloName", culture)} {Name}! {resMan.GetString("Age", culture) + Age() + Birth}";
         }
     }
 }

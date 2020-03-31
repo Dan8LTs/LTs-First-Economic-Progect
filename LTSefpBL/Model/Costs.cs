@@ -10,9 +10,8 @@ namespace LTSefpBL.Model
         public double Price { get; }
         public object Key { get; set; }
 
+        public Costs() { }
         public Costs(string name) : this(name, 0) { }
-
-
         public Costs(string name, double price)
         {
             Name = name;

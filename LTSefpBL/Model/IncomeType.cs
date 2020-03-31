@@ -20,6 +20,8 @@ namespace LTSefpBL.Model
         /// Создать новый тип.
         /// </summary>
         /// <param name="type">Имя типа.</param>
+
+        public IncomeType() { }
         public IncomeType(string type)
         {
             if (string.IsNullOrWhiteSpace(type))

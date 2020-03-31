@@ -16,10 +16,16 @@ namespace LTSefp.CMD
         public static void Main(string[] args)
         {
 
-            Console.WriteLine("Введите локализацию: en или ru");
-            string loc = Console.ReadLine();
-
-            var culture = CultureInfo.CreateSpecificCulture(loc);
+            string loc;
+            var culture = CultureInfo.CurrentCulture;
+            if (culture.ToString() == "ru-RU")
+            {
+                loc = "ru";
+            }
+            else
+            {
+                loc = "en";
+            }
 
             var resourceManager = new ResourceManager("LTSefp.CMD.Languages.Messages", typeof(Program).Assembly);
 
@@ -90,12 +96,13 @@ namespace LTSefp.CMD
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine(userController.CurrentUser);
+                Console.WriteLine(userController.CurrentUser.Hello(resourceManager, culture));
 
                 Console.WriteLine(resourceManager.GetString("Do", culture));
                 Console.WriteLine(resourceManager.GetString("Costs", culture));
                 Console.WriteLine(resourceManager.GetString("Contrib", culture));
                 Console.WriteLine(resourceManager.GetString("Cred", culture));
+                Console.WriteLine(resourceManager.GetString("Quit", culture));
 
 
                 var key = Console.ReadKey();
@@ -261,8 +268,7 @@ namespace LTSefp.CMD
                 Console.WriteLine();
                 if (key.Key == ConsoleKey.Q)
                 {
-                    Console.WriteLine("Спасибо:)");
-                    Console.WriteLine("Мы стараемся для вас)");
+                    Quit();
                 }
                 Console.ReadKey();
             }
@@ -318,6 +324,14 @@ namespace LTSefp.CMD
             var co = new Contribution(contr, formula, money, rate, month);
 
             return (Contribution: co, res);
+        }
+
+        public static void Quit()
+        {
+            Console.Clear();
+            Console.WriteLine("Спасибо:)");
+            Console.WriteLine("Мы стараемся для вас)");
+            while (true) { }
         }
     }
 }

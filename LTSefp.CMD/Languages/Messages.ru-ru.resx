@@ -120,6 +120,9 @@
   <data name=":" xml:space="preserve">
     <value>:</value>
   </data>
+  <data name="Age" xml:space="preserve">
+    <value>Вам: </value>
+  </data>
   <data name="BeforeCosts" xml:space="preserve">
     <value>Перед вводом нового расхода нажимайте enter</value>
   </data>
@@ -136,7 +139,7 @@
     <value>Введите название расхода:</value>
   </data>
   <data name="Costs" xml:space="preserve">
-    <value>Если вы хотите ввести свои расходы -  F</value>
+    <value>Ввести свои расходы -  F</value>
   </data>
   <data name="Cred" xml:space="preserve">
     <value>Рассчитать кредит - H</value>
@@ -162,6 +165,9 @@
   <data name="Hello" xml:space="preserve">
     <value>Привет! Это приложение LTSeconomics.</value>
   </data>
+  <data name="HelloName" xml:space="preserve">
+    <value>Здравствуйте</value>
+  </data>
   <data name="If you want" xml:space="preserve">
     <value>Введите cont, если захотите выйти из режима:</value>
   </data>
@@ -185,6 +191,9 @@
   </data>
   <data name="NotName" xml:space="preserve">
     <value>Это не твоё имя)))</value>
+  </data>
+  <data name="Quit" xml:space="preserve">
+    <value>Выйти - Q</value>
   </data>
   <data name="Rate" xml:space="preserve">
     <value>Введите годовую процентную ставку:</value>

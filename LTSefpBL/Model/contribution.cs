@@ -19,6 +19,8 @@ namespace LTSefpBL.Model
         public object Key { get; set; }
 
         public double Res { get; set; }
+
+        public Contribution() { }
         public Contribution(string name) : this(name, "", 0, 0, 0) { }
         public Contribution(string name, string formula, double money, float rate, double month)
         {

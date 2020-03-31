@@ -70,6 +70,15 @@ namespace LTSefp.CMD.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на You are: .
+        /// </summary>
+        public static string Age {
+            get {
+                return ResourceManager.GetString("Age", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Before input new cost press enter.
         /// </summary>
         public static string BeforeCosts {
@@ -196,6 +205,15 @@ namespace LTSefp.CMD.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Hello.
+        /// </summary>
+        public static string HelloName {
+            get {
+                return ResourceManager.GetString("HelloName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Enter cont, if you want to exit:.
         /// </summary>
         public static string If_you_want {
@@ -264,6 +282,15 @@ namespace LTSefp.CMD.Languages {
         public static string NotName {
             get {
                 return ResourceManager.GetString("NotName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Quit - Q.
+        /// </summary>
+        public static string Quit {
+            get {
+                return ResourceManager.GetString("Quit", resourceCulture);
             }
         }
         
