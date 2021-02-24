@@ -28,7 +28,7 @@ namespace LTSefpBL.Model
             {
                 throw new ArgumentNullException(" Эта строка не может быть пустой", nameof(type));
             }
-            else if(type.Length > 7)
+            else if(type.Length > 9)
             {
                 throw new ArgumentNullException(" Эта строка не может быть такой длинной. Или вы любите змей?", nameof(type));
             }

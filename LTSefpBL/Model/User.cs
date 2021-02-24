@@ -36,13 +36,13 @@ namespace LTSefpBL.Model
 
         public int Age() 
         {   
-            if(BirthDate < DateTime.Parse("01.01.1950") || BirthDate >= DateTime.Now)
+            if(BirthDate.Year > 1900 && BirthDate.Year <= DateTime.Now.Year)
             {
                 return DateTime.Now.Year - BirthDate.Year; 
             }
             else
             {
-                return 0;
+                throw new ArgumentNullException("This is not your age.");
             }
         }
         /// <summary>

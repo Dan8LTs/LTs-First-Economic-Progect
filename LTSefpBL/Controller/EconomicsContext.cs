@@ -6,7 +6,7 @@ namespace LTSefpBL.Controller
 {
     public class EconomicsContext : DbContext
     {
-        public EconomicsContext() : base("DBConnection") { }
+        public EconomicsContext() : base("LTsEconomicDB") { }
 
         public DbSet<Contribution> Contributionss { get; set; }
 

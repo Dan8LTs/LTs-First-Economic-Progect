@@ -73,7 +73,13 @@ namespace LTSefp.CMD
                     case "dollar":
                         currency = "$";
                         break;
+                    case "доллар":
+                        currency = "$";
+                        break;
                     case "euro":
+                        currency = "E";
+                        break;
+                    case "евро":
                         currency = "E";
                         break;
                     default:
