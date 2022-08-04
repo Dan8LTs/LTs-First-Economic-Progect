@@ -1,3 +1,3 @@
 # LTs-First-Economic-Progect
-My first beutiful progect.
+My first beautiful progect.
 Thank you, CodeBlog:)
